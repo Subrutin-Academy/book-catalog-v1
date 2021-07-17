@@ -1,16 +1,9 @@
 package com.subrutin.service;
 
-import com.subrutin.domain.Author;
-import com.subrutin.domain.Book;
+import com.subrutin.dto.BookDetailDTO;
 
-public class BookService {
-
-	private Book book;
-
-	public BookService() {
-		Author author = new Author();
-		book = new Book(author);
-	}
+public interface BookService {
 	
-	
+	public BookDetailDTO findBookDetailById(Long bookId);
+
 }

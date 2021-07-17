@@ -18,5 +18,8 @@
 		<constructor-arg ref="author"></constructor-arg>
 	</bean>
 
+	<bean id="bookRepository" class="com.subrutin.repository.impl.BookRepositoryImpl"></bean>
+	
+	<bean id="bookService" class="com.subrutin.service.impl.BookServiceImpl"></bean>
 
 </beans>

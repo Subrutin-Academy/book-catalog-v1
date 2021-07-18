@@ -48,6 +48,12 @@ public class BookDetailDTO implements Serializable {
 	public void setBookDescription(String bookDescription) {
 		this.bookDescription = bookDescription;
 	}
+
+	@Override
+	public String toString() {
+		return "BookDetailDTO [bookId=" + bookId + ", authorName=" + authorName + ", bookTitle=" + bookTitle
+				+ ", bookDescription=" + bookDescription + "]";
+	}
 	
 	
 

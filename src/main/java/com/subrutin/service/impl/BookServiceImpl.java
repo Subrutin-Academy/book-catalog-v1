@@ -1,11 +1,15 @@
 package com.subrutin.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.subrutin.domain.Author;
 import com.subrutin.domain.Book;
 import com.subrutin.dto.BookDetailDTO;
 import com.subrutin.repository.BookRepository;
 import com.subrutin.service.BookService;
 
+@Service("bookService")
 public class BookServiceImpl implements BookService{
 
 	private Book book;
@@ -13,7 +17,7 @@ public class BookServiceImpl implements BookService{
 	private BookRepository bookRepository;
 
 
-
+	@Autowired
 	public BookServiceImpl(BookRepository bookRepository) {
 		super();
 		this.bookRepository = bookRepository;

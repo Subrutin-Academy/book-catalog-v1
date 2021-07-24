@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 import com.subrutin.domain.Author;
@@ -13,6 +14,7 @@ import com.subrutin.repository.impl.BookRepositoryImpl;
 import com.subrutin.service.BookService;
 import com.subrutin.service.impl.BookServiceImpl;
 
+@ComponentScan(basePackages = {"com.subrutin"})
 @Configuration
 public class AppConfig {
 	
@@ -54,10 +56,7 @@ public class AppConfig {
 	}
 	
 	
-	@Bean
-	public BookService bookService(BookRepository bookRepository) {
-		return new BookServiceImpl(bookRepository);
-	}
+
 	
 	
 	
